@@ -166,7 +166,7 @@ const preloadScriptTag = (fileName: string): string =>
 
 // Generate a production script tag for a script asset
 const scriptTag = (fileName: string): string =>
-  `<script src="{{ '${fileName}' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous"></script>`
+  `<script src="{{ '${fileName}' | asset_url | split: '?' | first }}" type="module" crossorigin="anonymous" defer></script>`
 
 // Generate a production stylesheet link tag for a style asset
 const stylesheetTag = (fileName: string): string =>
